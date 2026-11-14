@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKYCLOUD ☁️ - Premium Cloud & VPS Hosting</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial}
+body{background:linear-gradient(180deg,#050816,#0a0f1e 40%,#0d1530);color:#fff;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:rgba(17,24,48,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);border-bottom:1px solid #1e2a55}
+.logo{font-size:24px;font-weight:900;letter-spacing:.5px}.logo b{color:#00e5ff}.logo span{font-size:10px;display:block;color:#8b9cc9;font-weight:700;letter-spacing:3px}
+.btn{background:linear-gradient(90deg,#00e5ff,#007bff);color:#000;padding:11px 18px;border:none;border-radius:999px;font-weight:800;cursor:pointer;box-shadow:0 4px 20px rgba(0,229,255,.35)}
+.btn-dark{background:#1a2342;color:#fff;padding:10px 14px;border:1px solid #2a3a6b;border-radius:999px;cursor:pointer;font-weight:700}
+.hero{text-align:center;padding:38px 18px 10px}
+.badge{background:#13233f;color:#00e5ff;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid #1e3a5f}
+.hero h1{font-size:37px;line-height:1.15;margin:16px 0 8px}.hero h1 span{background:linear-gradient(90deg,#00e5ff,#7b61ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#a8b4d6;font-size:15px;line-height:1.6}
+.stats{display:flex;justify-content:center;gap:10px;margin:18px 0;flex-wrap:wrap}
+.stat{background:#121a36;padding:10px 14px;border-radius:12px;border:1px solid #1e2a55;font-size:13px}.stat b{color:#00e5ff}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:20px}
+.card{background:linear-gradient(160deg,#161f3f,#111830);padding:20px;border-radius:18px;border:1px solid #232f5c;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-2px);transition:.2s;border-color:#00e5ff}
+.card h3{font-size:18px}.price{font-size:30px;font-weight:900;margin:10px 0}.price small{font-size:13px;color:#a8b4d6;font-weight:600}
+.card ul{list-style:none;color:#cbd5f5;font-size:14px;line-height:2}
+.card button{width:100%;margin-top:14px;background:linear-gradient(90deg,#00e5ff,#007bff);border:none;padding:13px;border-radius:12px;font-weight:900;cursor:pointer;font-size:15px}
+.popular{border:2px solid #00e5ff !important}
+.popular::before{content:"🔥 MOST POPULAR";position:absolute;top:0;right:0;background:#00e5ff;color:#000;font-size:11px;font-weight:900;padding:5px 10px;border-bottom-left-radius:12px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 20px 20px}
+.feat{background:#121a36;padding:14px;border-radius:14px;border:1px solid #1e2a55;font-size:13px;line-height:1.5}.feat span{font-size:20px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);align-items:center;justify-content:center;z-index:99;padding:15px}
+.modal-box{background:#fff;color:#000;width:100%;max-width:430px;padding:22px;border-radius:20px;max-height:92vh;overflow:auto}
+.modal-box input{width:100%;padding:13px;margin:8px 0;border:1.5px solid #e2e8f0;border-radius:12px;font-size:15px}
+.modal-box button{width:100%;padding:13px;background:linear-gradient(90deg,#00e5ff,#007bff);border:none;border-radius:12px;font-weight:900;margin-top:8px;cursor:pointer;font-size:15px}
+.upi-btn{display:flex;align-items:center;gap:10px;text-decoration:none;color:#000;background:#f1f5f9;padding:13px;border-radius:12px;margin-top:8px;font-weight:800;border:1px solid #e2e8f0}
+.qr-box{text-align:center;background:#f8fafc;padding:16px;border-radius:14px;margin:12px 0;border:1px dashed #cbd5e1}
+.qr-box img{width:200px;height:200px;border-radius:10px}
+.admin-card{background:#121a36;padding:16px;border-radius:16px;margin-bottom:12px;border:1px solid #232f5c;border-left:5px solid #00e5ff}
+.admin-card p{font-size:14px;line-height:1.8;color:#e2e8f0}
+.utr-box{background:#000;padding:10px;border-radius:10px;color:#00ff88;font-weight:900;margin:8px 0;letter-spacing:1px;font-size:15px}
+.a-btn{padding:10px 14px;border:none;border-radius:10px;font-weight:900;cursor:pointer;margin-right:8px;margin-top:8px;font-size:13px}
+.whatsapp{position:fixed;bottom:18px;right:18px;background:#25D366;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 8px 25px rgba(37,211,102,.5);z-index:80;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.order-card{background:#121a36;padding:14px;border-radius:14px;margin-bottom:10px;border:1px solid #232f5c}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">☁️ SKY<b>CLOUD</b><span>PREMIUM CLOUD</span></div>
+<div style="display:flex;gap:8px">
+<button class="btn-dark" onclick="openModal('adminLoginModal')">🔐 Admin</button>
+<button class="btn" onclick="openModal('loginModal')">👤 Login</button>
+</div>
+</header>
+
+<!-- MAIN -->
+<div id="mainSite">
+<div class="hero">
+<div class="badge">✨ ⚡ INSTANT SETUP • 99.9% UPTIME • 🇮🇳 MADE IN INDIA</div>
+<h1>Blazing Fast <span>Cloud & VPS</span><br>Ab Sabse Sasta! 🚀</h1>
+<p>🇮🇳 India • 🇸🇬 Singapore • 🇺🇸 USA Locations<br>NVMe SSD • DDoS Protection • 24/7 Support</p>
+<div class="stats">
+<div class="stat">⚡ <b>500+</b> Happy Users</div>
+<div class="stat">🚀 <b>Instant</b> Delivery</div>
+<div class="stat">⭐ <b>4.9/5</b> Rating</div>
+</div>
+<button class="btn" onclick="openModal('loginModal')" style="margin-top:8px">🎁 Abhi Join Karo</button>
+<button class="btn-dark" onclick="viewMyOrders()" style="margin-left:6px">📦 My Orders</button>
+</div>
+
+<div class="plans">
+<div class="card"><div style="font-size:28px">🌱</div><h3>STARTER</h3><div class="price">₹99<small> /mo</small></div><ul><li>⚙️ 1 vCPU Core</li><li>💾 2GB RAM</li><li>💿 30GB NVMe SSD</li><li>🌍 India Location</li><li>🛡️ Basic Protection</li></ul><button onclick="openPay('🌱 STARTER',99)">🛒 Buy Now</button></div>
+<div class="card popular"><div style="font-size:28px">🔥</div><h3>PRO</h3><div class="price">₹249<small> /mo</small></div><ul><li>⚙️ 2 vCPU Core</li><li>💾 4GB RAM</li><li>💿 60GB NVMe SSD</li><li>🌍 All Locations</li><li>⚡ Super Fast</li></ul><button onclick="openPay('🔥 PRO',249)">🛒 Buy Now</button></div>
+<div class="card"><div style="font-size:28px">💎</div><h3>ULTRA</h3><div class="price">₹499<small> /mo</small></div><ul><li>⚙️ 4 vCPU Core</li><li>💾 8GB RAM</li><li>💿 120GB NVMe SSD</li><li>🎧 Priority Support</li><li>🛡️ DDoS Protection</li></ul><button onclick="openPay('💎 ULTRA',499)">🛒 Buy Now</button></div>
+<div class="card"><div style="font-size:28px">👑</div><h3>MONSTER</h3><div class="price">₹999<small> /mo</small></div><ul><li>⚙️ 8 vCPU Core</li><li>💾 16GB RAM</li><li>💿 250GB NVMe SSD</li><li>👑 VIP Support</li><li>🚀 Max Performance</li></ul><button onclick="openPay('👑 MONSTER',999)">🛒 Buy Now</button></div>
+</div>
+
+<div class="features">
+<div class="feat"><span>⚡</span><br><b>Instant Setup</b><br>Payment ke 10 min me VPS ready</div>
+<div class="feat"><span>🛡️</span><br><b>Secure & Safe</b><br>DDoS + Firewall Protection</div>
+<div class="feat"><span>💬</span><br><b>24/7 Support</b><br>WhatsApp pe turant reply</div>
+<div class="feat"><span>💰</span><br><b>Best Price</b><br>India ka sabse sasta Cloud</div>
+</div>
+
+<div style="padding:0 20px 25px;text-align:center">
+<div style="background:linear-gradient(90deg,#00e5ff,#7b61ff);padding:18px;border-radius:16px;color:#000">
+<h3>🤔 Koi Doubt Hai?</h3><p style="font-size:14px;margin:6px 0">WhatsApp pe pucho, 2 min me reply milega!</p>
+<a href="https://wa.me/919288275209?text=Hi%20SKYCLOUD!%20Mujhe%20VPS%20chahiye" target="_blank" style="display:inline-block;background:#000;color:#fff;padding:11px 20px;border-radius:999px;text-decoration:none;font-weight:800;margin-top:6px">💬 WhatsApp Karo</a>
+</div>
+<p style="color:#5a6b9c;font-size:12px;margin-top:16px">© 2026 SKYCLOUD ☁️ | UPI: manishsingh110@ptaxis<br>Made with ❤️ in India 🇮🇳</p>
+</div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminSite" style="display:none;padding:16px;max-width:650px;margin:0 auto">
+<h2 style="text-align:center;color:#00e5ff">👑 SKYCLOUD - ADMIN PANEL 🔐</h2>
+<p style="text-align:center;color:#a8b4d6;font-size:13px;margin:8px 0">Logged in as: <b style="color:#fff">ofcskyblaze@gmail.com</b> ✅</p>
+<div style="display:flex;gap:10px;justify-content:center;margin:15px 0;flex-wrap:wrap">
+<button class="btn" onclick="loadOrders()">🔄 Refresh Orders</button>
+<button class="btn-dark" onclick="closeAdmin()">❌ Close Admin</button>
+</div>
+<div style="display:flex;gap:10px;justify-content:center;margin-bottom:15px">
+<div style="background:#121a36;padding:12px 16px;border-radius:12px;border:1px solid #232f5c">⏳ Pending: <b id="pendingCount" style="color:#ffcc00">0</b></div>
+<div style="background:#121a36;padding:12px 16px;border-radius:12px;border:1px solid #232f5c">✅ Approved: <b id="approvedCount" style="color:#00ff88">0</b></div>
+<div style="background:#121a36;padding:12px 16px;border-radius:12px;border:1px solid #232f5c">💰 Total: <b id="totalEarn" style="color:#00e5ff">₹0</b></div>
+</div>
+<h3 id="count" style="text-align:center;margin:10px 0"></h3>
+<div id="adminList"></div>
+</div>
+
+<!-- MY ORDERS -->
+<div class="modal" id="myOrdersModal"><div class="modal-box">
+<h2>📦 My Orders</h2><div id="myOrdersList" style="margin-top:12px"></div>
+<button onclick="closeModal('myOrdersModal')" style="background:#eee;color:#000">Close</button>
+</div></div>
+
+<!-- LOGIN -->
+<div class="modal" id="loginModal"><div class="modal-box">
+<h2>👋 Welcome to SKYCLOUD ☁️</h2><p style="font-size:13px;color:#666">Login karke Cloud kharido</p>
+<input id="email" placeholder="📧 Email" type="email"><input id="pass" placeholder="🔒 Password" type="password">
+<button onclick="signup()">✨ Create Account</button>
+<button onclick="login()" style="background:#111830;color:#fff">🔓 Login</button>
+<button onclick="closeModal('loginModal')" style="background:#eee;color:#000">Close</button>
+<p id="msg" style="color:red;font-size:13px"></p>
+</div></div>
+
+<!-- ADMIN LOGIN -->
+<div class="modal" id="adminLoginModal"><div class="modal-box">
+<h2>🔐 Admin Login 👑</h2><p style="font-size:13px;color:#666">Sirf Admin ke liye hai!</p>
+<input id="adminEmail" placeholder="📧 Admin Email"><input id="adminPass" type="password" placeholder="🔒 Admin Password">
+<button onclick="checkAdmin()">🚀 Open Admin Panel</button>
+<button onclick="closeModal('adminLoginModal')" style="background:#eee;color:#000">Close</button>
+<p id="adminMsg" style="color:red;font-size:13px;margin-top:8px"></p>
+</div></div>
+
+<!-- PAYMENT -->
+<div class="modal" id="payModal"><div class="modal-box">
+<h2 id="payTitle">💳 Pay ₹99</h2>
+<p style="font-size:13px;color:#666">🏦 UPI ID: <b>manishsingh110@ptaxis</b><br>👤 Name: SKYCLOUD</p>
+<div class="qr-box"><img id="qrImg" src=""><p style="font-size:13px;margin-top:8px">📱 Kisi bhi UPI App se Scan karo</p><p style="font-size:12px;color:#888">QR automatic amount ke saath banega</p></div>
+<a id="gpayBtn" class="upi-btn" href="#">🅖 Google Pay se Pay Karo →</a>
+<a id="phonepeBtn" class="upi-btn" href="#">💜 PhonePe se Pay Karo →</a>
+<a id="paytmBtn" class="upi-btn" href="#">💙 Paytm se Pay Karo →</a>
+<a id="bhimBtn" class="upi-btn" href="#">🇮🇳 BHIM / Any UPI App →</a>
+<input id="utrInput" placeholder="🧾 UTR / Transaction ID dalo (12 digit)">
+<p style="font-size:12px;color:#888">💡 Payment ke baad GPay/PhonePe me UTR milta hai, wahi dalo</p>
+<button onclick="confirmPaid()">✅ I Have Paid - Submit</button>
+<button onclick="closeModal('payModal')" style="background:#eee;color:#000">Close</button>
+</div></div>
+
+<!-- WhatsApp Floating -->
+<a class="whatsapp" href="https://wa.me/919288275209?text=Hi%20SKYCLOUD!%20Mujhe%20VPS%20chahiye" target="_blank">💬</a>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, query } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCc-Db7BHTxFifykyYIx44AIqdYZn87Kt0",
+  authDomain: "skyhub-169ed.firebaseapp.com",
+  projectId: "skyhub-169ed",
+  storageBucket: "skyhub-169ed.firebasestorage.app",
+  messagingSenderId: "942941076928",
+  appId: "1:942941076928:web:3d408bb2d3a85e93b45c25",
+  measurementId: "G-HNYVP489Q0"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const ADMIN_EMAIL = "ofcskyblaze@gmail.com";
+const ADMIN_PASS = "Spd@1979";
+const UPI_ID = "manishsingh110@ptaxis";
+const WHATSAPP = "919288275209";
+let currentPlan="", currentAmount=0;
+
+window.openModal = (id)=> document.getElementById(id).style.display='flex';
+window.closeModal = (id)=> document.getElementById(id).style.display='none';
+
+window.checkAdmin = ()=>{
+  const e=document.getElementById('adminEmail').value.trim();
+  const p=document.getElementById('adminPass').value;
+  if(e===ADMIN_EMAIL && p===ADMIN_PASS){
+    closeModal('adminLoginModal');
+    document.getElementById('mainSite').style.display='none';
+    document.getElementById('adminSite').style.display='block';
+    loadOrders(); window.scrollTo(0,0);
+  } else { document.getElementById('adminMsg').innerText='❌ Wrong Email / Password! Access Denied 🚫'; }
+};
+window.closeAdmin = ()=>{ document.getElementById('adminSite').style.display='none'; document.getElementById('mainSite').style.display='block'; document.getElementById('adminEmail').value=''; document.getElementById('adminPass').value=''; };
+
+window.loadOrders = async ()=>{
+  const snap = await getDocs(query(collection(db,"orders")));
+  let html=""; let i=0, pend=0, appr=0, earn=0;
+  snap.forEach(d=>{
+    const o=d.data(); i++; if(o.status.includes('VERIFY')||o.status.includes('PENDING')) pend++; if(o.status.includes('APPROVED')||o.status.includes('DELIVERED')){ appr++; earn+=Number(o.amount||0); }
+    const color = o.status.includes('APPROVED') ? '#00ff88' : o.status.includes('REJECTED') ? '#ff4444' : '#ffcc00';
+    html+=`<div class="admin-card">
+      <p>📦 <b style="color:#00e5ff">Plan:</b> ${o.plan} - <b>₹${o.amount}</b></p>
+      <p>📧 <b>Email:</b> ${o.email}</p>
+      <p>🕒 <b>Time:</b> ${o.time ? new Date(o.time).toLocaleString('hi-IN') : ''}</p>
+      <div class="utr-box">🧾 UTR: ${o.utr || 'Nahi Diya'}</div>
+      <p>📊 <b>Status:</b> <span style="color:${color};font-weight:800">${o.status}</span></p>
+      <button class="a-btn" style="background:#00ff88" onclick="markOrder('${d.id}','APPROVED ✅ Payment Approved - VPS Ready')">✅ Approve Payment</button>
+      <button class="a-btn" style="background:#7b61ff;color:#fff" onclick="markOrder('${d.id}','DELIVERED 🎉 VPS De Diya')">🎉 VPS De Diya</button>
+      <button class="a-btn" style="background:#ff4444;color:#fff" onclick="markOrder('${d.id}','REJECTED ❌ Payment Nahi Mila')">❌ Reject</button>
+      <button class="a-btn" style="background:#444;color:#fff" onclick="copyUTR('${o.utr}')">📋 UTR Copy</button>
+      <a href="https://wa.me/${WHATSAPP}?text=Hi!%20Aapka%20${encodeURIComponent(o.plan)}%20order%20${encodeURIComponent(o.status)}" target="_blank" style="text-decoration:none"><button class="a-btn" style="background:#25D366">💬 WhatsApp User</button></a>
+    </div>`;
+  });
+  document.getElementById('pendingCount').innerText=pend;
+  document.getElementById('approvedCount').innerText=appr;
+  document.getElementById('totalEarn').innerText='₹'+earn;
+  document.getElementById('count').innerText=`📋 Total Orders: ${i}`;
+  document.getElementById('adminList').innerHTML=html||'<p style="text-align:center">😔 Abhi koi order nahi hai</p>';
+};
+window.markOrder = async (id,status)=>{ await updateDoc(doc(db,"orders",id),{status}); loadOrders(); alert(status); };
+window.copyUTR = (utr)=>{ navigator.clipboard.writeText(utr); alert('📋 UTR Copy Ho Gaya: '+utr); };
+
+window.viewMyOrders = async ()=>{
+  if(!auth.currentUser){ alert('⚠️ Pehle Login Karo!'); openModal('loginModal'); return; }
+  const snap = await getDocs(query(collection(db,"orders")));
+  let html="";
+  snap.forEach(d=>{ const o=d.data(); if(o.email===auth.currentUser.email){
+    html+=`<div class="order-card" style="color:#fff"><p>📦 <b>${o.plan}</b> - ₹${o.amount}</p><p>🧾 UTR: ${o.utr}</p><p>📊 Status: <b>${o.status}</b></p><p style="font-size:12px;color:#a8b4d6">${o.time?new Date(o.time).toLocaleString('hi-IN'):''}</p></div>`;
+  }});
+  document.getElementById('myOrdersList').innerHTML=html||'<p style="color:#000">😔 Abhi koi order nahi hai</p>';
+  openModal('myOrdersModal');
+};
+
+window.openPay = (plan, amount)=>{
+  if(!auth.currentUser){ alert('⚠️ Pehle Login Karo!'); openModal('loginModal'); return; }
+  currentPlan=plan; currentAmount=amount;
+  document.getElementById('payTitle').innerText='💳 '+plan+' - Pay ₹'+amount;
+  const upiLink=`upi://pay?pa=${UPI_ID}&pn=SKYCLOUD&am=${amount}&cu=INR&tn=SKYCLOUD ${plan}`;
+  document.getElementById('qrImg').src=`https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(upiLink)}`;
+  document.getElementById('gpayBtn').href=`tez://upi/pay?pa=${UPI_ID}&pn=SKYCLOUD&am=${amount}&cu=INR&tn=SKYCLOUD ${plan}`;
+  document.getElementById('phonepeBtn').href=`phonepe://pay?pa=${UPI_ID}&pn=SKYCLOUD&am=${amount}&cu=INR&tn=SKYCLOUD ${plan}`;
+  document.getElementById('paytmBtn').href=`paytmmp://pay?pa=${UPI_ID}&pn=SKYCLOUD&am=${amount}&cu=INR&tn=SKYCLOUD ${plan}`;
+  document.getElementById('bhimBtn').href=upiLink;
+  openModal('payModal');
+};
+window.confirmPaid = async ()=>{
+  const utr=document.getElementById('utrInput').value.trim();
+  if(!utr||utr.length<10){ alert('⚠️ UTR dalo bhai, bina UTR ke verify nahi hoga!'); return; }
+  await addDoc(collection(db,"orders"),{plan:currentPlan, amount:currentAmount, email:auth.currentUser.email, utr:utr, upi:UPI_ID, time:new Date().toISOString(), status:"⏳ PAID - VERIFY PENDING"});
+  alert('🎉 Order Save Ho Gaya! UTR: '+utr+'\nAdmin jald approve karega.');
+  closeModal('payModal');
+};
+window.signup = async ()=>{ try{ await createUserWithEmailAndPassword(auth, document.getElementById('email').value, document.getElementById('pass').value); alert('🎉 Account Ban Gaya! Ab Login Karo'); }catch(e){ document.getElementById('msg').innerText=e.message } };
+window.login = async ()=>{ try{ await signInWithEmailAndPassword(auth, document.getElementById('email').value, document.getElementById('pass').value); alert('✅ Login Ho Gaya!'); closeModal('loginModal'); }catch(e){ document.getElementById('msg').innerText=e.message } };
+</script>
+</body>
+</html>
